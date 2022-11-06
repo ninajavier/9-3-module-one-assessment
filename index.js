@@ -91,7 +91,17 @@ function getAverageIMDBRating(movies) {
  *  countByRating(movies);
  *  //> { G: 3, PG: 7 }
  */
-function countByRating() {}
+function countByRating(movies) {
+  movieRatings = {};
+  for (let i = 0; i < movies.length; i++) {
+    if (movieRatings[movies[i].rated]) {
+      movieRatings[movies[i].rated] += 1;
+    } else {
+      movieRatings[movies[i].rated] = 1;
+    }
+  }
+  return movieRatings;
+}
 
 /**
  * findById()
