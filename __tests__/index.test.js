@@ -137,7 +137,7 @@ describe("findById()", () => {
   });
 });
 
-describe.only("filterByGenre()", () => {
+describe("filterByGenre()", () => {
   test("should return all movies that include the specified genre", () => {
     const genre = "Mystery";
     const actual = filterByGenre(movies, genre);
